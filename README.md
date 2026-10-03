@@ -11,6 +11,12 @@ QT-1 is a ZMK based Lego remote, it also works as a keyboard - so it could be us
 - Control up to 64 motors
 - Motor speed control on a layer
 
+## Links
+
+- [Firmware source code](https://github.com/george-norton/zmk-keyboard-qt-1)
+- [Bluetooth hub control ZMK module](https://github.com/george-norton/zmk-behavior-ble-lego-control)
+- [ZMK Studio for remapping buttons](https://zmk.studio/)
+
 ## Hub compatability
 
 QT-1 has been tested with the following hubs:
@@ -28,6 +34,7 @@ You will need the following:
 - Soldering iron
 - Unleaded solder (this is a toy)
 - Screwdriver to match the screws you choose
+- Optional hot glue gun to make an LED diffuser
 
 Bill of materials:
 
@@ -46,6 +53,28 @@ Bill of materials:
 | 1            | 3D Printed case                 | FDM printed in PLA (mine were ordered from JLCPCB)                                                                                      |
 | 2            | M3 5mm Heat-set insert          |                                                                                                                                         |
 | 2            | M3 countersunk screw 10 or 12mm | These are visible from the front - consider coloured screws.                                                                            |
+
+
+![Photo](images/assembly1.jpg) ![Photo](images/assembly2.jpg)
+
+### Tips
+- Take care soldering the switches - they are easy to melt if you nick them with your soldering iron.
+- To solder switches, tin on pad, add some flux, place the switch then reheat the solder.
+- If a switch is miss-aligned the top case will not fit. Solder the switches on one side then check everything fits before soldering on the other sides.
+
+## Firmware
+
+Grab prebuilt firmware from [here](https://github.com/george-norton/zmk-keyboard-qt-1/releases/), connect the remote to a computer via the USB port and double ta the reset button (or short the pads twice if no button is installed) to put it into bootloader mode. Then drag and drop the uf2 file to the drive that appears.
+
+Once you are running QT-1 firmware, you can press the two centre buttons together to go into bootloader mode.
+
+## Default Keymap
+
+- The two d-pads control motors.
+- The top middle button pairs hubs when pressed and turns the controller off when held.
+- The bottom middle button toggles between the motor control layer and the speed control layer.
+- Pressing the to middle buttons together puts the controller into bootloader mode.
+
 ## Schematic
 
 ![Schematic](images/schematic.png)
